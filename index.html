@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+<!--     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body class="flex-column min-100-vh">
+    <header class="hero">
+      <h1 class="app-title">
+        <i class="fas fa-cloud-sun"></i> Weather Dashboard
+      </h1>
+      <p>
+        Search for a city and get current and future conditions for that city!
+      </p>
+    </header>
+
+    <main class="flex-row justify-space-between">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <h3 class="card-header text-uppercase">Search For a City</h3>
+          <form id="city-form" class="card-body">
+            <label class="form-label" for="cityname">City name</label>
+            <input
+              name="cityname"
+              id="cityname"
+              type="text"
+              autofocus="true"
+              class="form-input"
+            />
+            <button type="submit" class="btn">Get Weather</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3 class="card-header text-uppercase">Search By City</h3>
+          <div id="city-buttons" class="card-body">
+            <button data-city="Austin" class="btn">Austin</button>
+<!--             <button data-city="Chicago" class="btn">Chicago</button>
+            <button data-city="New York" class="btn">New York</button>
+            <button data-city="Orlando" class="btn">Orlando</button>
+            <button data-city="San Francisco" class="btn">San Francisco</button>
+            <button data-city="Seattle" class="btn">Seattle</button>
+            <button data-city="Denver" class="btn">Denver</button>
+            <button data-city="Atlanta" class="btn">Atlanta</button> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-8">
+        <h2 class="subtitle">
+          Current Weather for: <span id="city-search-term"></span>
+        </h2>
+        <div id="city-container" class="list-group">
+          <div class="city-weather">
+            <div class="current-weather">
+              <h2><i></i></h2>
+              <p class="temperature">Temperature: <span></span>F</p>
+              <p class="wind">Wind: <span></span>MPH</p>
+              <p class="humidity">Humidity: <span></span>%</p>
+              <p class="uvi">UV Index: <span></span></p>
+            </div>
+
+            <div class="weather-forecast"></div>
+
+            <h2>5-Day Forecast</h2>
+
+            <div class="card weather-card" id="card1">
+              <p class="date"><span></span></p>
+              <p class="temperature">Temperature: <span></span>F</p>
+              <p class="wind">Wind: <span></span>MPH</p>
+              <p class="humidity">Humidity: <span></span>%</p>
+            </div>
+            <div class="card weather-card"   id="card2">
+              <p class="date"><span></span></p>
+              <p class="temperature">Temperature: <span></span>F</p>
+              <p class="wind">Wind: <span></span>MPH</p>
+              <p class="humidity">Humidity: <span></span>%</p>
+            </div>
+            <div class="card weather-card"  id="card3">
+              <p class="date"><span></span></p>
+              <p class="temperature">Temperature: <span></span>F</p>
+              <p class="wind">Wind: <span></span>MPH</p>
+              <p class="humidity">Humidity: <span></span>%</p>
+            </div>
+            <div class="card weather-card"  id="card4">
+              <p class="date"><span></span></p>
+              <p class="temperature">Temperature: <span></span>F</p>
+              <p class="wind">Wind: <span></span>MPH</p>
+              <p class="humidity">Humidity: <span></span>%</p>
+            </div>
+            <div class="card weather-card"  id="card5">
+              <p class="date"><span></span></p>
+              <p class="temperature">Temperature: <span></span>F</p>
+              <p class="wind">Wind: <span></span>MPH</p>
+              <p class="humidity">Humidity: <span></span>%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/weather.js"></script>
+  </body>
+</html>
