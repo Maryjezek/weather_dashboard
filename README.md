@@ -3,7 +3,7 @@ This is a weather dashboard that runs in the browser
 Using Third-party APIs to access data by making requests with specific parameters to a URL.
 This app uses the Use the OpenWeather One Call API to retrieve weather data for cities.
 
-##Acceptance criteria
+## Acceptance criteria
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
