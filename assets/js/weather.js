@@ -136,40 +136,20 @@ var displayCity = function (citydata, searchTerm) {
 
   var uviEl = document.querySelector("#city-container .uvi span");
   uviEl.textContent = uvi;
-//WORK ON THE UVI INDICATOR
+  //WORK ON THE UVI INDICATOR
+  var uviBox = document.querySelector("#uviBox");
 
+  if (parseInt(uvi) < 3) {
+    uviBox.classList = "good";
+    //cityButtonsEl.appendChild(uviBox);
+  }
+  if (parseInt(uvi) == 3) {
+    uviBox.classList = "okay";
+  }
 
-if (parseInt(uvi) < 3) {
-  $(this).addClass("present");
-  $(this).removeClass("future");
-  $(this).removeClass("past");
-
-  console.log("present", $(this))
-}
-
-if (parseInt(time) < parseInt(currentTime)) {
-  $(this).addClass("past");
-  $(this).removeClass("future");
-  $(this).removeClass("present");
-  console.log("past", $(this))
-}
-if (parseInt(time) > parseInt(currentTime)) {
-  $(this).addClass("future");
-  $(this).removeClass("present");
-  $(this).removeClass("past");
-  console.log("future", $(this))
-}
-
-
-
-
-
-
-
-
-
-
-
+  if (parseInt(uvi) > 3) {
+    uviBox.classList = "bad";
+  }
 
   // append container to the dom
   cityContainerEl.appendChild(weatherEl);
@@ -194,8 +174,12 @@ if (parseInt(time) > parseInt(currentTime)) {
   var Temp1 = citydata.daily[0].temp.max; //How do I get the temperature in Fahrenheit??
   var wind_speed1 = citydata.daily[0].wind_speed;
   var humidity1 = citydata.daily[0].humidity;
+  var icon1 = citydata.daily[0].weather[0].icon;
   var dateCard1El = document.querySelector("#card1 .date span");
   dateCard1El.textContent = Date1;
+  //add icon
+  var iconCard1El = document.querySelector("#card1 .icon span");
+  iconCard1El.textContent = "" //"http://openweathermap.org/img/wn/" + icon1 + "@2x.png"; //I'm still working on this
   var temperatureCard1El = document.querySelector("#card1 .temperature span");
   temperatureCard1El.textContent = Temp1;
   var windCard1El = document.querySelector("#card1 .wind span");

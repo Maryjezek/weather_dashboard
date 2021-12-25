@@ -189,6 +189,35 @@
     border-radius: var(--border-radius);
   }
   
+/*UVI box*/
+.good{
+  background-color: green;
+  width: 150px;
+  font-weight: bold;
+  color: white;
+}
+
+#uviBox .okay{
+  background-color: orange;
+  width: 150px;
+  font-weight: bold;
+  color: white;
+}
+
+#uviBox .bad{
+  background-color: red;
+  width: 150px;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+
+
+
+
+
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
     min-height: 100vh;
